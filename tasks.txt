@@ -15,16 +15,3 @@ POST /api/users - Create new user
 PATCH /api/users/1 - edit the user with id 1
 
 DELETE /api/users/1 -  delete the user with id 1
-
-app
-.route("/api/users/:id")
-.get((req, res) => {
-    const id = Number(req.params.id);
-    const user = users.find((user) => user.id === id);
-    return res.json(user);})
-.patch((req, res) => {
-    // todo: edit the user with id
-    return res.json({status:'PENDING'});})
-.delete((req, res) => {
-    // todo: delete the user with id
-    return res.json({status:'PENDING'});})
